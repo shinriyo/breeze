@@ -11,10 +11,12 @@ https://github.com/scmbreeze/scm_breeze
 
 ## Shortcut list
 
-`gs` `git status`
-`ga` `git add`
-`gaa` `git add .`
-`gp` `git push`
+| original | Shorcut command |
+|:-----------|------------:|
+| gs | git status |
+| ga | git add |
+| gaa | git add |.
+| gp | git push |
 
 ## Install
 
