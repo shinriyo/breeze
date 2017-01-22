@@ -3,8 +3,8 @@
 set arr ""
 
 function __gs
-  git status --porcelain
-  echo ---------
+  # git status --porcelain
+  # echo ---------
 
   # increment
   set i 0
@@ -58,6 +58,6 @@ function __gs
 end
 
 function gs
-    git status
+    # git status
     __gs
 end
