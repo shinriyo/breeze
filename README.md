@@ -21,6 +21,7 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 | gpl | git pull |
 | gr | git remove -v |
 | gt | git tag |
+| grm | git rm |
 | gco | git checkout |
 | gl | git log |
 | gsh | git show |
