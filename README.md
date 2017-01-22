@@ -24,7 +24,8 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 | grm | git rm |
 | gco | git checkout |
 | gl | git log |
-| gsh | git show |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
 | glg | git log --graph --max-count=5 |
 | gurl | git config --get remote.origin.url |
 
