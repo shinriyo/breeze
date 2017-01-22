@@ -20,6 +20,8 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 | gps | git push |
 | gpl | git pull |
 | gr | git remove -v |
+| grs | git reset -- |
+| grsh | git reset --hard |
 | gt | git tag |
 | grm | git rm |
 | gco | git checkout |

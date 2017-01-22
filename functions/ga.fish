@@ -1,3 +1,5 @@
 function ga
-    git add $argv
+    # number
+    set myarg $arr[$argv]
+    git add $myarg
 end
