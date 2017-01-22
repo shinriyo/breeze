@@ -5,9 +5,7 @@
 
 Shortcut tools for git command.
 
-It is inspired from scm_breeze.
-
-https://github.com/scmbreeze/scm_breeze
+It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze").
 
 ## Shortcut list
 
@@ -31,6 +29,10 @@ fisher shinriyo/breeze
 ## Usage
 
 Just use short cut command of Shortcut list.
+
+`gs`
+
+`ga [number]`
 
 [travis-link]: https://travis-ci.org/shinriyo/breeze
 [travis-badge]: https://img.shields.io/travis/shinriyo/breeze.svg

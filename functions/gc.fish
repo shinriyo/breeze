@@ -1,3 +1,3 @@
 function gc
-    # do something
+    git checkout $argv
 end
