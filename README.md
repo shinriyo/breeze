@@ -15,9 +15,11 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 | gcef | git clean -fd |
 | gs | git status |
 | ga | git add |
+| gf | git fetch |
 | gaa | git add --all . |
 | gps | git push |
 | gpl | git pull |
+| gr | git remove -v |
 | gt | git tag |
 | gco | git checkout |
 | gl | git log |
