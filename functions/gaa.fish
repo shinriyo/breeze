@@ -1,3 +1,3 @@
 function gaa
-    git add .
+    git add --all .
 end

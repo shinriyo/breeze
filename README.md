@@ -9,12 +9,16 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 
 ## Shortcut list
 
-| original | Shorcut command |
+| Original | Shortcut command |
 |:-----------|------------:|
+| gce | git clean |
+| gcef | git clean -fd |
 | gs | git status |
 | ga | git add |
-| gaa | git add . |
+| gaa | git add --all . |
 | gp | git push |
+| gpl | git pull |
+| gt | git tag |
 | gco | git checkout |
 | gurl | git config --get remote.origin.url |
 
