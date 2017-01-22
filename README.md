@@ -16,10 +16,13 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 | gs | git status |
 | ga | git add |
 | gaa | git add --all . |
-| gp | git push |
+| gps | git push |
 | gpl | git pull |
 | gt | git tag |
 | gco | git checkout |
+| gl | git log |
+| gsh | git show |
+| glg | git log --graph --max-count=5 |
 | gurl | git config --get remote.origin.url |
 
 ## Install
