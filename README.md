@@ -15,8 +15,10 @@ https://github.com/scmbreeze/scm_breeze
 |:-----------|------------:|
 | gs | git status |
 | ga | git add |
-| gaa | git add |.
+| gaa | git add . |
 | gp | git push |
+| gco | git checkout |
+| gurl | git config --get remote.origin.url |
 
 ## Install
 
