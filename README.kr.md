@@ -33,5 +33,3 @@ Just use short cut command of Shortcut list.
 [slack-link]: https://fisherman-wharf.herokuapp.com
 [slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
 [fisherman]: https://github.com/fisherman/fisherman
-
-***Enjoy!***
