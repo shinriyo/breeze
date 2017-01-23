@@ -1,4 +1,13 @@
+function __ga
+end
+
 function ga
+    # TODO: space like, `ga 1 2 3`
+    set res (string split " " -- (string trim $argv))
+    for i in $res
+        echo $i
+    end
+
     # number
     set res (string split "-" -- (string trim $argv))
     set first $res[1]

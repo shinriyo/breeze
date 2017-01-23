@@ -9,7 +9,9 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 
 ## Shortcut list
 
-| Original | Shortcut command |
+### Port from SCM Breez
+
+| Shortcut command | Original | 
 |:-----------|------------:|
 | gce | git clean |
 | gcef | git clean -fd |
@@ -29,7 +31,20 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 | gdnw | git diff -w -- |
 | gdf | git diff -- |
 | glg | git log --graph --max-count=5 |
-| gurl | git config --get remote.origin.url |
+
+
+### Original Shortcut for git
+
+| Shortcut command | comment |
+|:-----------|------------:|
+| gurl | git config --get remote.origin.url |  |
+| gopen | open your github (macOS Only) |
+
+### Useful Shortcut
+
+| Shortcut command | comment |
+|:-----------|------------:|
+| mkfunc | create fish function file in functions |
 
 ## Install
 
