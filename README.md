@@ -1,3 +1,6 @@
+[日本語]: README.jp.md
+[한국어]: README.kr.md
+
 # breeze
 
 [![Build Status][travis-badge]][travis-link]
@@ -6,6 +9,8 @@
 Shortcut tools for git command.
 
 It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze").
+
+Translations: [日本語], [繁體中文], [简体中文], [한국어], [Русский], [Português], [Türkçe], [Español], [Français], [Català], [Deutsch], [فارسی].
 
 ## Shortcut list
 
@@ -45,7 +50,8 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 
 | Shortcut command | comment |
 |:-----------|------------:|
-| mkfunc | create fish function file in functions |
+| mkfunc | create fish function file in functions. |
+| mkdoc | create focument for several country. |
 
 ## Install
 
