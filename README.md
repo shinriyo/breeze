@@ -51,7 +51,12 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | Shortcut command | comment |
 |:-----------|------------:|
 | mkfunc | create fish function file in functions. |
-| mkdoc | create focument for several country. |
+| mkdoc | create Markdown document for several country. |
+| mkpy | create template for Python. |
+| mkrb | create template for Ruby. |
+| mkgo | create template for Go. |
+| mkhtml | create template for HTML. |
+| mkjs | create template for JavaScript. |
 
 ## Install
 
