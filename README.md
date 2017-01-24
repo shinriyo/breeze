@@ -13,6 +13,7 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 
 | Shortcut command | Original | 
 |:-----------|------------:|
+| gb | git branch |
 | gce | git clean |
 | gcef | git clean -fd |
 | gs | git status |

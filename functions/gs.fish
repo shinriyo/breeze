@@ -52,7 +52,7 @@ function __gs
 
     #set -g -x eval(echo $i) $name
     set arr[$i] $name
-    echo [$i] $msg $name
+    echo $msg [$i] $name
     set_color normal
   end
 end
