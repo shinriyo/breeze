@@ -1,5 +1,5 @@
 [日本語]: README.jp.md
-[한국어]: README.kr.md
+[한국어]: README.ko.md
 
 # breeze
 
