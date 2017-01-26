@@ -57,6 +57,7 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | mkgo | create template for Go. |
 | mkhtml | create template for HTML. |
 | mkjs | create template for JavaScript. |
+| mkexs| create template for Elixir. |
 
 ## Install
 
