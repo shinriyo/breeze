@@ -59,6 +59,8 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | mkcss | create template for css. |
 | mkjs | create template for JavaScript. |
 | mkexs| create template for Elixir. |
+| mkjava | create template for Java. |
+| mkc | create template for C. |
 
 ## Install
 
