@@ -1,8 +1,8 @@
 # for global
-# TODO: I can't used `set -g -x arr hoge` for global variables.
-set arr ""
+set -g -x arr ""
 
 function __gs
+  set arr ""
   # git status --porcelain
   # echo ---------
 

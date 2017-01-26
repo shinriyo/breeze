@@ -1,3 +1,3 @@
 function gce
-    git clean
+    git clean $argv
 end
