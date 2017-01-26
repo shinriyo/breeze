@@ -56,6 +56,7 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | mkrb | create template for Ruby. |
 | mkgo | create template for Go. |
 | mkhtml | create template for HTML. |
+| mkcss | create template for css. |
 | mkjs | create template for JavaScript. |
 | mkexs| create template for Elixir. |
 
