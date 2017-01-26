@@ -34,8 +34,18 @@ function __ga
 end
 
 function ga
+    echo '--'
     # TODO: space like, `ga 1 2 3`
+    echo $argv
     set res (string split " " -- (string trim $argv))
+    set length (count $res)
+    echo $length
+    # only one
+    if [ $length -eq 0 ]
+        __ga $argv
+        return
+    end
+
     for i in $res
         #echo $i
         __ga $i
