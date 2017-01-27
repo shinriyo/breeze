@@ -61,6 +61,7 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | mkexs| create template for Elixir. |
 | mkjava | create template for Java. |
 | mkc | create template for C. |
+| mkchromeext | create template for Chrome Extension. |
 
 ## Install
 
