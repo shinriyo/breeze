@@ -59,7 +59,7 @@ function __gs
     set_color normal
     echo -ne [$i]' ' # text without new line
     set_color $color_name
-    echo -ne $name
+    echo $name
     set_color normal
   end
 end
