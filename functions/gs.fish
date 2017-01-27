@@ -13,46 +13,53 @@ function __gs
     set st $res[1]
     set name $res[2]
 
+    set color_name 'normal'
+
     # modify
     if [ $st = 'M' ]
       # modified
-      set_color green
+      set color_name 'green'
       set msg 'modified:'
       # if it is none, it is staged modified.
       if [ $name = '' ]
-        set_color yellow
+        set color_name 'yellow'
         # [caution] 2 white spaces.
         set name (string split "  " -- (string trim $item))[2]
       end
       set i (math $i + 1) #increment
     else if [ $st = 'A' ]
       # added
-      set_color yellow
+      set color_name 'yellow'
       set msg 'staged:'
         # [caution] 2 white spaces.
         set name (string split "  " -- (string trim $item))[2]
       set i (math $i + 1) #increment
     else if [ $st = '??' ]
       # untracked
-      set_color cyan
+      set color_name 'cyan'
       set msg 'untracked:'
       set i (math $i + 1) #increment
     else if [ $st = 'D' ]
       # deleted
-      set_color red
+      set color_name 'red'
       set msg 'deleted:'
       set i (math $i + 1) #increment
     else
       # TODO: add other status
       # just echo until add
       echo $item
-      set_color normal
+      set color_name 'normal'
       continue
     end
 
-    #set -g -x eval(echo $i) $name
     set arr[$i] $name
-    echo $msg [$i] $name
+
+    set_color $color_name
+    echo -ne $msg '' # text without new line
+    set_color normal
+    echo -ne [$i]' ' # text without new line
+    set_color $color_name
+    echo -ne $name
     set_color normal
   end
 end
