@@ -29,8 +29,7 @@ function __gbl
     # first < last
     if [ $last != '' ]
         if [ $first -lt $last ]
-          #for i in (seq $first 1 $last)
-          for i in $res
+          for i in (seq $first 1 $last)
               __git_blame $i
           end
         else
