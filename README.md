@@ -37,7 +37,7 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gdnw | git diff -w -- |
 | gdf | git diff -- |
 | glg | git log --graph --max-count=5 |
-
+| gbl | git blame |
 
 ### Original Shortcut for git
 
@@ -69,6 +69,12 @@ With [fisherman]
 
 ```
 fisher shinriyo/breeze
+```
+
+## Uninstall
+
+```
+fisher uninstall breeze
 ```
 
 ## Usage
