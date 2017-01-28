@@ -46,11 +46,13 @@ function __gs
       set msg '        modified:'
       # if it is none, it is staged modified.
       if [ $name = '' ]
+        # 'M ' commited
         set color_name 'yellow'
         # [caution] 2 white spaces.
         set name (string split "  " -- (string trim $item))[2]
         set now_state $git_status1
       else
+        # ' M'
         set color_name 'green'
         set now_state $git_status3
       end
@@ -73,8 +75,18 @@ function __gs
       # deleted
       set color_name 'red'
       set msg '         deleted:'
+
+      if [ $name = '' ]
+        # 'D ' commited
+        # [caution] 2 white spaces.
+        set name (string split "  " -- (string trim $item))[2]
+        set now_state $git_status1
+      else
+        # ' D'
+        set now_state $git_status3
+      end
+
       set i (math $i + 1) #increment
-      set now_state $git_status3
     else if [ $st = 'MM' ]
       # modified and also commited
       set msg '        modified:'
