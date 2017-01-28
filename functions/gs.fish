@@ -39,6 +39,7 @@ function __gs
     set name $res[2]
 
     set color_name 'normal'
+    set renamed_message ''
 
     # modify
     if [ $st = 'M' ]
@@ -115,7 +116,16 @@ function __gs
     else if [ $st = 'UU' ]
       echo 'TODO: FIX LATER...'
     else if [ $st = 'R' ]
-      echo 'TODO: FIX LATER...'
+      # renamed
+      set msg '         renamed:'
+      set all_name (string split "  " -- (string trim $item))[2]
+      set all_name (string split " -> " -- (string trim $all_name))
+      set renamed_message $all_name[1]'-> '
+      set name $all_name[2]
+      #set color_name 'magenta' like purple
+      set color_name 'green'
+      set now_state $git_status1
+      set i (math $i + 1) #increment
     else if [ $st = 'C' ]
       echo 'TODO: FIX LATER...'
     else
@@ -137,6 +147,7 @@ function __gs
 
     set last_state $now_state
 
+    # push array
     set arr[$i] $name
 
     set_color $color_name
@@ -144,7 +155,7 @@ function __gs
     set_color normal
     echo -ne [$i]' ' # text without new line
     set_color $color_name
-    echo $name
+    echo $renamed_message$name
     set_color normal
   end
 end
