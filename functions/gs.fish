@@ -31,6 +31,7 @@ function __gs
   set i 0
   # git status --porcelain
   set last_state ""
+  set now_state ""
 
   for item in (git status --porcelain)
     set res (string split " " -- (string trim $item))
@@ -48,8 +49,10 @@ function __gs
         set color_name 'yellow'
         # [caution] 2 white spaces.
         set name (string split "  " -- (string trim $item))[2]
+        set now_state $git_status1
       else
         set color_name 'green'
+        set now_state $git_status3
       end
 
       set i (math $i + 1) #increment
@@ -65,49 +68,66 @@ function __gs
       set color_name 'cyan'
       set msg '       untracked:'
       set i (math $i + 1) #increment
+      set now_state $git_status4
     else if [ $st = 'D' ]
       # deleted
       set color_name 'red'
       set msg '         deleted:'
       set i (math $i + 1) #increment
+      set now_state $git_status3
+    else if [ $st = 'MM' ]
+      # modified and also commited
+      set msg '        modified:'
+      # if it is none, it is staged modified.
+      if [ $name = '' ]
+        set color_name 'yellow'
+        # [caution] 2 white spaces.
+        set name (string split "  " -- (string trim $item))[2]
+        set now_state $git_status1
+      else
+        set color_name 'green'
+        set now_state $git_status3
+      end
+
+      set i (math $i + 1) #increment
     else if [ $st = 'DD' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else if [ $st = 'AU' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else if [ $st = 'UD' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else if [ $st = 'DU' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else if [ $st = 'AA' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else if [ $st = 'UU' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else if [ $st = 'R' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else if [ $st = 'C' ]
-      echo 'TODO: UNKNOWN. FIX LATER...'
+      echo 'TODO: FIX LATER...'
     else
       # TODO: add other status
       # just echo until add
       echo $item
       set color_name 'normal'
       echo 'TODO: UNKNOWN. FIX LATER...'
-      set last_state $st
       continue
     end
 
     # first message
-    if [ $last_state != $st ]
-      # TODO:
-      # echo $arrow $git_status1 
+    if [ $last_state != $now_state ]
+      set_color $color_name
+      echo $arrow $now_state
+      echo '#'
     end
 
-    set last_state $st
+    set last_state $now_state
 
     set arr[$i] $name
 
     set_color $color_name
-    echo -ne $msg '' # text without new line
+    echo -ne '#'$msg '' # text without new line
     set_color normal
     echo -ne [$i]' ' # text without new line
     set_color $color_name
