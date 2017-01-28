@@ -70,6 +70,22 @@ function __gs
       set color_name 'red'
       set msg '         deleted:'
       set i (math $i + 1) #increment
+    else if [ $st = 'DD' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
+    else if [ $st = 'AU' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
+    else if [ $st = 'UD' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
+    else if [ $st = 'DU' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
+    else if [ $st = 'AA' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
+    else if [ $st = 'UU' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
+    else if [ $st = 'R' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
+    else if [ $st = 'C' ]
+      echo 'TODO: UNKNOWN. FIX LATER...'
     else
       # TODO: add other status
       # just echo until add
