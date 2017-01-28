@@ -33,8 +33,6 @@ function __gco
         if [ $first -lt $last ]
           #for i in (seq $first 1 $last)
           for i in $res
-              #set myarg $arr[$i]
-              #git checkout $myarg
               __git_checkout $i
           end
         else

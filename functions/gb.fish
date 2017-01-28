@@ -17,11 +17,12 @@ function gb
     # >
     set is_contain true
     set name ""
+    # more than one
     if [ $length -gt 1 ]
         # with *
-        set name $res[2]
-    else
-        set name $item
+        set name (string trim $res[2])
+    else #only one
+        set name (string trim $item)
     end
 
     set arr[$i] $name
@@ -30,7 +31,11 @@ function gb
     if [ $length -gt 1 ]
         # text without new line
         echo -ne '* '
+    else
+        # just blank
+        echo -ne '  '
     end
+
     # text without new line
     echo -ne [$i]' '
     set_color green
