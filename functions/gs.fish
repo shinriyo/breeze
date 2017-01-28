@@ -63,9 +63,10 @@ function __gs
       # added
       set color_name 'yellow'
       set msg '          staged:'
-        # [caution] 2 white spaces.
-        set name (string split "  " -- (string trim $item))[2]
+      # [caution] 2 white spaces.
+      set name (string split "  " -- (string trim $item))[2]
       set i (math $i + 1) #increment
+      set now_state $git_status1
     else if [ $st = '??' ]
       # untracked
       set color_name 'cyan'
