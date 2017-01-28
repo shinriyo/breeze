@@ -129,6 +129,7 @@ function __gs
 
     # first message
     if [ $last_state != $now_state ]
+      echo ''
       set_color $color_name
       echo $arrow $now_state
       echo '#'

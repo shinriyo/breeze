@@ -3,6 +3,12 @@ function __title_case -a string
 end
 
 function mkexs
+    if count $argv > /dev/null
+    else
+       echo 'Please input file name for argument.'
+       return
+    end
+
     set length (count $argv)
     # only one
     if [ $length -eq 0 ]

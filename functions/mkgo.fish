@@ -1,4 +1,10 @@
 function mkgo
+    if count $argv > /dev/null
+    else
+       echo 'Please input file name for argument.'
+       return
+    end
+
     string trim '// You can edit this code!
 // Click here and start typing.
 package main
