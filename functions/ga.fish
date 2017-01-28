@@ -27,13 +27,21 @@ function __ga
     end
 
     # first < last
+
     if [ $last != '' ]
+        set arr_length (count $arr)
+
+        # clamp as array length
+        if [ $first -lt $last ]
+          set last arr_length 
+        end
+
         if [ $first -lt $last ]
           for i in (seq $first 1 $last)
               __git_add $i
           end
         else
-          echo 'argument is not valid.'
+          echo 'Argument is not valid.'
         end
     else
         __git_add $first
