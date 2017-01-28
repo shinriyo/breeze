@@ -5,8 +5,12 @@ function __gs
   set check_count (git status --porcelain)
   set length (count $check_count)
   if [ $length -gt 1 ]
-  # reset
-  set arr ""
+    # reset
+    set arr ""
+  else
+    # just normal command
+    git status
+    return
   end
 
   # increment
