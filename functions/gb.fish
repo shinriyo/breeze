@@ -2,7 +2,13 @@
 set -g -x arr ""
 
 function gb
-  set arr ""
+  set check_count (git branch)
+  set length (count $check_count)
+    if [ $length -gt 1 ]
+    # reset
+    set arr ""
+  end
+
   # increment
   set i 0
 

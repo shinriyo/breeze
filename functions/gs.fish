@@ -2,12 +2,16 @@
 set -g -x arr ""
 
 function __gs
+  set check_count (git status --porcelain)
+  set length (count $check_count)
+  if [ $length -gt 1 ]
+  # reset
   set arr ""
-  # git status --porcelain
-  # echo ---------
+  end
 
   # increment
   set i 0
+  # git status --porcelain
   for item in (git status --porcelain)
     set res (string split " " -- (string trim $item))
     set st $res[1]
