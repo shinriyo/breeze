@@ -1,8 +1,17 @@
+set -g -x arr ""
+
 function __git_add -a var
     # is numeric 
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
         set myarg $arr[$var]
+
+        # -- (hyphen hyphen) compare
+        set hyphen (printf "%b" (printf '%s%x' '\x' 45))
+        if [ "$myarg" = "$hyphen$hyphen" ] 2>/dev/null
+            set myarg './'$myarg 
+        end
+
         git add $myarg
     else
         # not a number
@@ -20,20 +29,29 @@ function __ga
     # >
     if [ $length -gt 1 ]
         set last $res[2]
+    # >
     else
         # just one
-        __git_add $myarg
+        __git_add $res
         return
     end
 
     # first < last
+
     if [ $last != '' ]
+        set arr_length (count $arr)
+
+        # clamp as array length
+        if [ $arr_length -lt $last ]
+          set last $arr_length 
+        end
+
         if [ $first -lt $last ]
           for i in (seq $first 1 $last)
               __git_add $i
           end
         else
-          echo 'argument is not valid.'
+          echo 'Argument is not valid.'
         end
     else
         __git_add $first
@@ -42,12 +60,10 @@ function __ga
 end
 
 function ga
-    echo '--'
     # space like, `ga 1 2 3`
-    echo $argv
     set res (string split " " -- (string trim $argv))
     set length (count $res)
-    echo $length
+
     # only one
     if [ $length -eq 0 ]
         __ga $argv

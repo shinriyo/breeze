@@ -25,14 +25,60 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 English
 ' > ./README.jp.md
 
-    # TODO:
+    # Chinese
+    string trim '# '$argv'
+Chinese
+' > ./README.zh-tw.md
+
+    # Chinese-cn
+    string trim '# '$argv'
+Chinese
+' > ./README.zh-cn.md
 
     # Korean
     string trim '# '$argv'
 English
-' > ./README.kr.md
+' > ./README.ko.md
 
-    # TODO:
+    # Russia
+    string trim '# '$argv'
+Russia
+' > ./README.ru.md
+
+    # Portuguese
+    string trim '# '$argv'
+Portuguese
+' > ./README.pt.md
+
+    # Turkey
+    string trim '# '$argv'
+Turkey
+' > ./README.tr.md
+
+    # Spanish
+    string trim '# '$argv'
+Spanish
+' > ./README.es.md
+
+    # Franch
+    string trim '# '$argv'
+Franch
+' > ./README.fr.md
+
+    # Catalunya
+    string trim '# '$argv'
+Catalunya
+' > ./README.ca.md
+
+    # Germany
+    string trim '# '$argv'
+Germany
+' > ./README.du.md
+
+    # Persian
+    string trim '# '$argv'
+Persian
+' > ./README.fa.md
 
     echo 'Markdown files was created.'
 end

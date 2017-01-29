@@ -1,4 +1,10 @@
 function mkc
+    if count $argv > /dev/null
+    else
+       echo 'Please input file name for argument.'
+       return
+    end
+
     string trim '
 #include <stdio.h>
 

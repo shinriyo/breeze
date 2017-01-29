@@ -3,11 +3,10 @@ function __title_case -a string
 end
 
 function mkjava
-    set length (count $argv)
-    # only one
-    if [ $length -eq 0 ]
-        echo 'no argumant error.'
-        return
+    if count $argv > /dev/null
+    else
+       echo 'Please input file name for argument.'
+       return
     end
 
     set cap (__title_case $argv)
