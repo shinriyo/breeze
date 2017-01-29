@@ -20,6 +20,7 @@ function __ga
     # >
     if [ $length -gt 1 ]
         set last $res[2]
+    # >
     else
         # just one
         __git_add $myarg
@@ -32,8 +33,8 @@ function __ga
         set arr_length (count $arr)
 
         # clamp as array length
-        if [ $first -lt $last ]
-          set last arr_length 
+        if [ $arr_length -lt $last ]
+          set last $arr_length 
         end
 
         if [ $first -lt $last ]
@@ -50,12 +51,10 @@ function __ga
 end
 
 function ga
-    echo '--'
     # space like, `ga 1 2 3`
-    echo $argv
     set res (string split " " -- (string trim $argv))
     set length (count $res)
-    echo $length
+
     # only one
     if [ $length -eq 0 ]
         __ga $argv

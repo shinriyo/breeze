@@ -16,10 +16,11 @@ function __gc
     set first $res[1]
     set length (count $res)
     set last ""
-echo first 
+
     # >
     if [ $length -gt 1 ]
         set last $res[2]
+    # >
     else
         # just one
         __git_commit $myarg
@@ -32,8 +33,8 @@ echo first
         set arr_length (count $arr)
 
         # clamp as array length
-        if [ $first -lt $last ]
-          set last arr_length 
+        if [ $arr_length -lt $last ]
+          set last $arr_length 
         end
 
         if [ $first -lt $last ]
@@ -50,12 +51,10 @@ echo first
 end
 
 function gc
-    echo '--'
     # space like, `gc 1 2 3`
-    echo $argv
     set res (string split " " -- (string trim $argv))
     set length (count $res)
-    echo $length
+
     # only one
     if [ $length -eq 0 ]
         __gc $argv
