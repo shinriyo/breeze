@@ -81,9 +81,19 @@ fisher uninstall breeze
 
 Just use short cut command of Shortcut list.
 
-`gs`
+### `git status`'s shortcut command `gs`
 
-`ga [number]`
+<div class="centered">
+<img src="http://i.imgur.com/F3NHal3.png" alt="Gs With Shortcuts" />
+</div>
+
+### just `ga [number]` (gs and gl also)
+
+(ex)`1`, `1-3`, `2 3`
+
+<div class="centered">
+<img src="http://i.imgur.com/RpspQI2.png" alt="Ga With Shortcuts" />
+</div>
 
 [travis-link]: https://travis-ci.org/shinriyo/breeze
 [travis-badge]: https://img.shields.io/travis/shinriyo/breeze.svg

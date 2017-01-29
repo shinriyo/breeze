@@ -3,30 +3,83 @@
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-Shortcut tools for git command.
+gitコマンドのショートカットツールです。
 
-It is inspired from scm_breeze.
+SCM Breezeにインスパイアされました。
 
 https://github.com/scmbreeze/scm_breeze
 
-## Shortcut list
+## ショートカットリスト
 
-`gs` `git status`
-`ga` `git add`
-`gaa` `git add .`
-`gp` `git push`
+| Shortcut command | Original | 
+|:-----------|------------:|
+| gb | git branch |
+| gce | git clean |
+| gcef | git clean -fd |
+| gs | git status |
+| ga | git add |
+| gf | git fetch |
+| gaa | git add --all . |
+| gps | git push |
+| gpl | git pull |
+| gr | git remove -v |
+| grs | git reset -- |
+| grsh | git reset --hard |
+| gt | git tag |
+| grm | git rm |
+| gco | git checkout |
+| gl | git log |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
+| glg | git log --graph --max-count=5 |
+| gbl | git blame |
 
-## Install
+### gitのためのオリジナルショートカット
 
-With [fisherman]
+| Shortcut command | comment |
+|:-----------|------------:|
+| gurl | git config --get remote.origin.url |  |
+| gopen | open your github (macOS Only) |
+
+### 便利ショートカット
+
+| Shortcut command | comment |
+|:-----------|------------:|
+| mkfunc | create fish function file in functions. |
+| mkdoc | create Markdown document for several country. |
+| mkpy | create template for Python. |
+| mkrb | create template for Ruby. |
+| mkgo | create template for Go. |
+| mkhtml | create template for HTML. |
+| mkcss | create template for css. |
+| mkjs | create template for JavaScript. |
+| mkexs| create template for Elixir. |
+| mkjava | create template for Java. |
+| mkc | create template for C. |
+| mkchromeext | create template for Chrome Extension. |
+
+## インストール
+
+[fisherman]とともに使います。
 
 ```
 fisher shinriyo/breeze
 ```
 
-## Usage
+## 使い方
 
-Just use short cut command of Shortcut list.
+### `git status`のgsコマンドを使って数字を見る。
+
+<div class="centered">
+<img src="http://i.imgur.com/F3NHal3.png" alt="Gs With Shortcuts" />
+</div>
+
+### `ga`のあとに数字指定で追加。(gcoやglも数字指定可能)
+
+(例)`1`, `1-3`, `2 3`など。
+<div class="centered">
+<img src="http://i.imgur.com/RpspQI2.png" alt="Ga With Shortcuts" />
+</div>
 
 [travis-link]: https://travis-ci.org/shinriyo/breeze
 [travis-badge]: https://img.shields.io/travis/shinriyo/breeze.svg
