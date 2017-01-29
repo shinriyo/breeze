@@ -148,9 +148,14 @@ function __gs
 
     set last_state $now_state
 
+#    # -- (hyphen hyphen) compare
+#    set hyphen (printf "%b" (printf '%s%x' '\x' 45))
+#    if [ "$name" = "$hyphen$hyphen" ] 2>/dev/null
+#      set name './'$name
+#    end
+
     # push array
     set arr[$i] $name
-
     set_color $color_name
     echo -ne '#'$msg '' # text without new line
     set_color normal
