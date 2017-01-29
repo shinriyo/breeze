@@ -12,9 +12,7 @@ function __gd
         # just one
         echo $arr
         set myarg $arr[$res]
-        echo '-------------' 
         echo $myarg
-        echo '-------------' 
         git diff $myarg
         return
     end
@@ -22,13 +20,20 @@ function __gd
     # first < last
     if [ $last != '' ]
         if [ $first -lt $last ]
-          #for i in (seq $first 1 $last)
-          for i in $res
-              set myarg $arr[$i]
-              git diff $myarg
-          end
+           set arr_length (count $arr)
+
+           # clamp as array length
+           if [ $arr_length -lt $last ]
+             set last $arr_length
+           end
+
+           #for i in (seq $first 1 $last)
+           for i in $res
+               set myarg $arr[$i]
+               git diff $myarg
+           end
         else
-          echo 'argument is not valid.'
+            echo 'Argument is not valid.'
         end
     else
         set myarg $arr[$first]
@@ -38,7 +43,7 @@ function __gd
 end
 
 function gd
-    # TODO: space like, `ga 1 2 3`
+    # TODO: space like, `gd 1 2 3`
     # only one
     set res (string split " " -- (string trim $argv))
     set length (count $res)
