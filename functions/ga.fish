@@ -1,8 +1,17 @@
+set -g -x arr ""
+
 function __git_add -a var
     # is numeric 
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
         set myarg $arr[$var]
+
+        # -- (hyphen hyphen) compare
+        set hyphen (printf "%b" (printf '%s%x' '\x' 45))
+        if [ "$myarg" = "$hyphen$hyphen" ] 2>/dev/null
+            set myarg './'$myarg 
+        end
+
         git add $myarg
     else
         # not a number
@@ -23,7 +32,7 @@ function __ga
     # >
     else
         # just one
-        __git_add $myarg
+        __git_add $res
         return
     end
 
