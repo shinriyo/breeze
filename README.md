@@ -8,7 +8,7 @@
 [Español]: README.es.md
 [Français]: README.fr.md
 [Català]: README.ca.md
-[Deutsch]: README.de.md
+[Deutsch]: README.du.md
 [فارسی]: README.fa.md
 
 # breeze
