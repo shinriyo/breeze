@@ -28,22 +28,19 @@ function __gco
         return
     end
 
-    # first < last
+    # last exists
     if [ $last != '' ]
+        # first < last
         if [ $first -lt $last ]
-          #for i in (seq $first 1 $last)
-          for i in $res
+          for i in (seq $first 1 $last)
               __git_checkout $i
           end
         else
           echo 'argument is not valid.'
         end
     else
-        #set myarg $arr[$first]
-        #git checkout $myarg
         __git_checkout $first
     end
-    #echo $res[1]end
 end
 
 function gco

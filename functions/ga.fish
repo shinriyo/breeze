@@ -36,8 +36,7 @@ function __ga
         return
     end
 
-    # first < last
-
+    # last exists
     if [ $last != '' ]
         set arr_length (count $arr)
 
@@ -46,6 +45,7 @@ function __ga
           set last $arr_length 
         end
 
+        # first < last
         if [ $first -lt $last ]
           for i in (seq $first 1 $last)
               __git_add $i
@@ -56,7 +56,6 @@ function __ga
     else
         __git_add $first
     end
-    #echo $res[1]end
 end
 
 function ga
