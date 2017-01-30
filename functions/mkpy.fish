@@ -6,7 +6,7 @@ function mkpy
         return
     end
 
-    # check argument
+    # check file exists
     if test -e './'$argv'.py'
         echo -sn './'$argv'.py already exists. Continue to override? [Y/n] ' > /dev/stderr
         __fisher_get_key | read -l yn

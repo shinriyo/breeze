@@ -6,7 +6,7 @@ function mkgo
         return
     end
 
-    # check argument
+    # check file exists
     if test -e './'$argv'.go'
         echo -sn './'$argv'.go already exists. Continue to override? [Y/n] ' > /dev/stderr
         __fisher_get_key | read -l yn

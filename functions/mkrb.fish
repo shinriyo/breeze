@@ -6,7 +6,7 @@ function mkrb
         return
     end
 
-    # check argument
+    # check file exists
     if test -e './'$argv'.rb'
         echo -sn './'$argv'.rb already exists. Continue to override? [Y/n] ' > /dev/stderr
         __fisher_get_key | read -l yn
