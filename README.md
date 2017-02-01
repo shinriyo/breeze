@@ -35,6 +35,8 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | ga | git add |
 | gf | git fetch |
 | gaa | git add --all . |
+| gap | git add -p |
+| gau | git add -u |
 | gps | git push |
 | gpl | git pull |
 | gr | git remove -v |

@@ -18,6 +18,8 @@ https://github.com/scmbreeze/scm_breeze
 | gcef | git clean -fd |
 | gs | git status |
 | ga | git add |
+| gap | git add -p |
+| gau | git add -u |
 | gf | git fetch |
 | gaa | git add --all . |
 | gps | git push |
