@@ -99,8 +99,10 @@ function __gs
         set name (string split "  " -- (string trim $item))[2]
         set now_state $git_status1
       else
-        set color_name 'green'
-        set now_state $git_status3
+        #set color_name 'green'
+        #set now_state $git_status3
+        set color_name 'yellow'
+        set now_state $git_status1
       end
 
       set i (math $i + 1) #increment
@@ -140,7 +142,7 @@ function __gs
 
     # first message
     if [ $last_state != $now_state ]
-      echo ''
+      echo '#'
       set_color $color_name
       echo $arrow $now_state
       echo '#'
@@ -156,9 +158,9 @@ function __gs
     echo -ne [$i]' ' # text without new line
     set_color $color_name
     echo $renamed_message$name
-    set_color normal
   end
   echo '#'
+  set_color normal
 end
 
 function gs
