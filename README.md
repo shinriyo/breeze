@@ -53,6 +53,7 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gcl | git clone |
 | gdw | git diff --word-diff |
 | gpr | git pull --rebase |
+| grsl | git reset HEAD~ |
 
 ### Original Shortcut for git
 

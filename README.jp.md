@@ -38,6 +38,7 @@ https://github.com/scmbreeze/scm_breeze
 | gcl | git clone |
 | gdw | git diff --word-diff |
 | gpr | git pull --rebase |
+| grsl | git reset HEAD~ |
 
 ### gitのためのオリジナルショートカット
 
