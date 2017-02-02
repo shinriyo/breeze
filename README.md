@@ -50,6 +50,9 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gdf | git diff -- |
 | glg | git log --graph --max-count=5 |
 | gbl | git blame |
+| gcl | git clone |
+| gdw | git diff --word-diff |
+| gpr | git pull --rebase |
 
 ### Original Shortcut for git
 

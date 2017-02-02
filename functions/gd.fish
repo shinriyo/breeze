@@ -43,7 +43,7 @@ function __gd
 end
 
 function gd
-    # TODO: space like, `gd 1 2 3`
+    # space like, `gd 1 2 3`
     # only one
     set res (string split " " -- (string trim $argv))
     set length (count $res)

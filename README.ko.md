@@ -35,6 +35,9 @@ https://github.com/scmbreeze/scm_breeze
 | gdf | git diff -- |
 | glg | git log --graph --max-count=5 |
 | gbl | git blame |
+| gcl | git clone |
+| gdw | git diff --word-diff |
+| gpr | git pull --rebase |
 
 ### git를 위한 오리지널 바로가기
 
