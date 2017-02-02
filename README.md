@@ -54,6 +54,9 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gdw | git diff --word-diff |
 | gpr | git pull --rebase |
 | grsl | git reset HEAD~ |
+| gm | git merge |
+| gmff | git merge --no-ff |
+| gmnff | git merge --ff |
 
 ### Original Shortcut for git
 

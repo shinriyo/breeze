@@ -39,6 +39,9 @@ https://github.com/scmbreeze/scm_breeze
 | gdw | git diff --word-diff |
 | gpr | git pull --rebase |
 | grsl | git reset HEAD~ |
+| gm | git merge |
+| gmff | git merge --no-ff |
+| gmnff | git merge --ff |
 
 ### git를 위한 오리지널 바로가기
 
