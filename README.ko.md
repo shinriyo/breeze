@@ -42,6 +42,9 @@ https://github.com/scmbreeze/scm_breeze
 | gm | git merge |
 | gmff | git merge --no-ff |
 | gmnff | git merge --ff |
+| gash | git stash |
+| gasha | git stash apply |
+| gashl | git stash list |
 
 ### git를 위한 오리지널 바로가기
 

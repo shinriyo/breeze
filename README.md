@@ -57,6 +57,9 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gm | git merge |
 | gmff | git merge --no-ff |
 | gmnff | git merge --ff |
+| gash | git stash |
+| gasha | git stash apply |
+| gashl | git stash list |
 
 ### Original Shortcut for git
 
