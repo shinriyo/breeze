@@ -67,6 +67,7 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 |:-----------|------------:|
 | gurl | git config --get remote.origin.url |  |
 | gopen | open your github (macOS Only) |
+| gashu | git stash --include-untracked |
 
 ### Useful Shortcut
 

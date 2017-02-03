@@ -53,6 +53,7 @@ https://github.com/scmbreeze/scm_breeze
 |:-----------|------------:|
 | gurl | git config --get remote.origin.url |  |
 | gopen | open your github (macOS Only) |
+| gashu | git stash --include-untracked |
 
 ### 便利ショートカット
 
