@@ -1,3 +1,16 @@
+[日本語]: README.jp.md
+[繁體中文]: README.zh-tw.md
+[简体中文]: README.zh-cn.md
+[한국어]: README.ko.md
+[Русский]: README.ru.md
+[Português]: README.pt.md
+[Türkçe]: README.tr.md
+[Español]: README.es.md
+[Français]: README.fr.md
+[Català]: README.ca.md
+[Deutsch]: README.du.md
+[فارسی]: README.fa.md
+
 # breeze
 
 [![Build Status][travis-badge]][travis-link]
@@ -5,9 +18,11 @@
 
 git커맨드의 바로가기 툴입니다.
 
-SCM Breeze인스파이어 되었습니다. 
+[SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze")인스파이어 되었습니다. .
 
-https://github.com/scmbreeze/scm_breeze
+<div class="centered">
+<img src="http://i.imgur.com/MEKxPSD.png" alt="breeze logos" />
+</div>
 
 ## 바로가기 리스트 
 

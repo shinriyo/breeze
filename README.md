@@ -22,6 +22,10 @@ It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Br
 
 Translations: [日本語], [繁體中文], [简体中文], [한국어], [Русский], [Português], [Türkçe], [Español], [Français], [Català], [Deutsch], [فارسی].
 
+<div class="centered">
+<img src="http://i.imgur.com/MEKxPSD.png" alt="breeze logos" />
+</div>
+
 ## Shortcut list
 
 ### Port from SCM Breez
