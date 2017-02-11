@@ -2,6 +2,18 @@
 set -g -x arr ""
 
 function gb
+    set length (count $argv)
+
+    if [ $length -eq 2 ]
+        # more than 1
+        set fst (echo $argv[1] | string sub -l 1)
+        # if first string is -, it is option
+        if [ $fst = '-' ]
+            git branch $argv
+            return
+        end
+    end
+
   set check_count (git branch)
   set length (count $check_count)
     if [ $length -gt 1 ]
