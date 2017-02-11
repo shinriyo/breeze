@@ -45,6 +45,18 @@ end
 
 function gco
     # TODO: space like, `gco 1 2 3`
+    set length (count $argv)
+
+    if [ $length -eq 2 ]
+        # more than 1
+        set fst (echo $argv[1] | string sub -l 1)
+        # if first string is -, it is option
+        if [ $fst = '-' ]
+            git checkout $argv
+            return
+        end
+    end
+
     set res (string split " " -- (string trim $argv))
     for i in $res
         #echo $i
