@@ -38,7 +38,7 @@ function __ga
 
     # last exists
     if [ $last != '' ]
-        set arr_length (count $res)
+        set arr_length (count $arr)
 
         # clamp as array length
         if [ $arr_length -lt $last ]
