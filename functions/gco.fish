@@ -2,7 +2,12 @@ function __git_checkout -a var
     # is numeric
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
-        set myarg $arr[$var]
+        #set myarg $arr[$var]
+        set length (count $arr)
+        if [ $var -gt $length ]
+            echo 'Number is large.'
+            return
+        end
         git checkout $myarg
     else
         # not a number
@@ -36,7 +41,7 @@ function __gco
               __git_checkout $i
           end
         else
-          echo 'argument is not valid.'
+          echo 'Argument is not valid.'
         end
     else
         __git_checkout $first
