@@ -2,8 +2,8 @@
 set -g -x arr ""
 
 function __gs
-  set check_count (git status --porcelain)
-  set length (count $check_count)
+  set porcelain_res (git status --porcelain)
+  set length (count $porcelain_res)
 
   if [ $length -gt 0 ]
     # reset
@@ -164,6 +164,11 @@ function __gs
 end
 
 function gs
-    # git status
-    __gs
+    # check path .git
+    if test -e '.git'
+        # git status
+        __gs
+    else
+        echo 'fatal: Not a git repository (or any of the parent directories): .git'
+    end
 end
