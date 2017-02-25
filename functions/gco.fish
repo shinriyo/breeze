@@ -2,12 +2,13 @@ function __git_checkout -a var
     # is numeric
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
-        #set myarg $arr[$var]
         set length (count $arr)
+
         if [ $var -gt $length ]
             echo 'Number is large.'
             return
         end
+        set myarg $arr[$var]
         git checkout $myarg
     else
         # not a number
