@@ -28,7 +28,7 @@ gitコマンドのショートカットツールです。
 
 ## ショートカットリスト
 
-| Shortcut command | Original | 
+| ショートカット | オリジナル | 
 |:-----------|------------:|
 | gb | git branch |
 | gce | git clean |
@@ -66,11 +66,12 @@ gitコマンドのショートカットツールです。
 
 ### gitのためのオリジナルショートカット
 
-| Shortcut command | comment |
-|:-----------|------------:|
-| gurl | git config --get remote.origin.url |  |
-| gopen | open your github (macOS Only) |
-| gashu | git stash --include-untracked |
+| ショートカット | オリジナル | コメント |
+|:-----------|------------|------------:|
+| gurl | git config --get remote.origin.url | |
+| gopen | open your github (macOS Only) | |
+| gashu | git stash --include-untracked | |
+| gbu | git branch --set-upstream-to=origin/<branch> master | パラメータは自分のブランチ名を指定してください。 |
 
 ## インストール
 

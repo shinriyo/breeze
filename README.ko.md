@@ -27,7 +27,7 @@ git커맨드의 바로가기 툴입니다.
 
 ## 바로가기 리스트 
 
-| Shortcut command | Original | 
+| 바로가기 | 오리지널 | 
 |:-----------|------------:|
 | gb | git branch |
 | gce | git clean |
@@ -64,11 +64,12 @@ git커맨드의 바로가기 툴입니다.
 
 ### git를 위한 오리지널 바로가기
 
-| Shortcut command | comment |
-|:-----------|------------:|
-| gurl | git config --get remote.origin.url |  |
-| gopen | open your github (macOS Only) |
-| gashu | git stash --include-untracked |
+| 바로가기 | 오리지널 | 비고 |
+|:-----------|------------|------------:|
+| gurl | git config --get remote.origin.url | |
+| gopen | open your github (macOS Only) | |
+| gashu | git stash --include-untracked | |
+| gau | git branch --set-upstream-to=origin/<branch> master | master 브랜치명입니다. |
 
 ## 인스톨 
 
