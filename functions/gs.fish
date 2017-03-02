@@ -10,7 +10,6 @@ function __gs
     set arr ""
     set first_msg (git status)
     for branch_name in (git status)
-      echo '#'
       echo '# ' $branch_name
       echo '#'
       break # only one
@@ -25,7 +24,7 @@ function __gs
   set git_status1 "Changes to be committed":
   set git_status3 "Changes not staged for commit":
   set git_status4 "Untracked files":
-  set arrow "➤"
+  set arrow "➤ "
 
   # increment
   set i 0
@@ -144,7 +143,10 @@ function __gs
     if [ $last_state != $now_state ]
       echo '#'
       set_color $color_name
-      echo $arrow $now_state
+      echo -n $arrow
+      set_color 'normal'
+      echo $now_state
+      set_color $color_name
       echo '#'
     end
 
