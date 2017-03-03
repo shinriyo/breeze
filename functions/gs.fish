@@ -10,8 +10,17 @@ function __gs
     set arr ""
     set first_msg (git status)
     for branch_name in (git status)
-      echo '# ' $branch_name
+      #echo '# ' $branch_name
+      set_color brblack
+      echo -n '# '
+      set_color normal
+      echo -n 'On branch: '
+      set_color --bold white
+      echo $branch_name|cut -d ' ' -f3
+      set_color normal
+      set_color brblack
       echo '#'
+      # set_color normal
       break # only one
     end
   else
