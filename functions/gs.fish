@@ -33,6 +33,8 @@ function __gs
   set git_status1 "Changes to be committed":
   set git_status3 "Changes not staged for commit":
   set git_status4 "Untracked files":
+  set git_status5 "Unmerged paths:"
+
   set arrow "➤ "
 
   # increment
@@ -107,25 +109,27 @@ function __gs
         set name (string split "  " -- (string trim $item))[2]
         set now_state $git_status1
       else
-        #set color_name 'green'
-        #set now_state $git_status3
         set color_name 'yellow'
         set now_state $git_status1
       end
 
       set i (math $i + 1) #increment
     else if [ $st = 'DD' ]
-      echo 'TODO: FIX LATER...'
+      echo 'TODO: FIX LATER...DD'
     else if [ $st = 'AU' ]
-      echo 'TODO: FIX LATER...'
+      echo 'TODO: FIX LATER...AU'
     else if [ $st = 'UD' ]
-      echo 'TODO: FIX LATER...'
+      echo 'TODO: FIX LATER...UD'
     else if [ $st = 'DU' ]
-      echo 'TODO: FIX LATER...'
+      echo 'TODO: FIX LATER...DU'
     else if [ $st = 'AA' ]
-      echo 'TODO: FIX LATER...'
+      echo 'TODO: FIX LATER...AA'
     else if [ $st = 'UU' ]
-      echo 'TODO: FIX LATER...'
+      #echo 'TODO: FIX LATER...UU'
+      set msg '        modified:'
+      set color_name 'red'
+      set now_state $git_status5
+      set i (math $i + 1) #increment
     else if [ $st = 'R' ]
       # renamed
       set msg '         renamed:'
