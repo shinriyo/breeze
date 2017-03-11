@@ -73,6 +73,8 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gopen | open your github (macOS Only) | |
 | gashu | git stash --include-untracked | |
 | gbu | git branch --set-upstream-to=origin/<branch> master | Argument is your branch name. ex. gbu master |
+| gtop | git rev-parse --show-toplevel | Show git top path. |
+| cdgtop | cd (git rev-parse --show-toplevel) | Chenge directory of git top path. |
 
 ## Install
 

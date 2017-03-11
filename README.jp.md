@@ -72,6 +72,8 @@ gitコマンドのショートカットツールです。
 | gopen | open your github (macOS Only) | |
 | gashu | git stash --include-untracked | |
 | gbu | git branch --set-upstream-to=origin/<branch> master | パラメータは自分のブランチ名を指定してください。 |
+| gtop | git rev-parse --show-toplevel | gitのtopのパスを表示します. |
+| cdgtop | cd (git rev-parse --show-toplevel) | gitのtopのパスへ移動します. |
 
 ## インストール
 

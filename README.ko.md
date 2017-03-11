@@ -70,6 +70,8 @@ git커맨드의 바로가기 툴입니다.
 | gopen | open your github (macOS Only) | |
 | gashu | git stash --include-untracked | |
 | gau | git branch --set-upstream-to=origin/<branch> master | master 브랜치명입니다. |
+| gtop | git rev-parse --show-toplevel | git 상위 계층의 경로를 표시합니다. |
+| cdgtop | cd (git rev-parse --show-toplevel) | git 상위 계층의 경로를 전환합니다. |
 
 ## 인스톨 
 
