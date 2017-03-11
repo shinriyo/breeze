@@ -179,8 +179,8 @@ function __gs
 end
 
 function gs
-    # check path .git
-    if test -e '.git'
+    set res (git rev-parse --is-inside-work-tree)
+    if [ $res = 'true' ]
         # git status
         __gs
     else
