@@ -4,6 +4,7 @@ function __gd
     set first $res[1]
     set length (count $res)
     set last ""
+    set toplevel (git rev-parse --show-toplevel)
 
     # >
     if [ $length -gt 1 ]
@@ -13,7 +14,7 @@ function __gd
         echo $arr
         set myarg $arr[$res]
         echo $myarg
-        git diff $myarg
+        git diff $toplevel/$myarg
         return
     end
 
@@ -30,14 +31,14 @@ function __gd
            #for i in (seq $first 1 $last)
            for i in $res
                set myarg $arr[$i]
-               git diff $myarg
+               git diff $toplevel/$myarg
            end
         else
             echo 'Argument is not valid.'
         end
     else
         set myarg $arr[$first]
-        git diff $myarg
+        git diff $toplevel/$myarg
     end
     #echo $res[1]end
 end
