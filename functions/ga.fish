@@ -1,6 +1,8 @@
 set -g -x arr ""
 
 function __git_add -a var
+    set toplevel (git rev-parse --show-toplevel)
+
     # is numeric 
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
@@ -12,10 +14,10 @@ function __git_add -a var
             set myarg './'$myarg 
         end
 
-        git add $myarg
+        git add $toplevel/$myarg
     else
         # not a number
-        git add $var
+        git add $toplevel/$var
     end
 end
 
