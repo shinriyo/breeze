@@ -1,4 +1,7 @@
 function __git_checkout -a var
+    # TODO: for branch or file
+    set toplevel (git rev-parse --show-toplevel)
+
     # is numeric
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
