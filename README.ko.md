@@ -37,6 +37,8 @@ git커맨드의 바로가기 툴입니다.
 | gap | git add -p |
 | gau | git add -u |
 | gf | git fetch |
+| gfa | git fetch --all |
+| gfr | git fetch && git rebase |
 | gaa | git add --all . |
 | gps | git push |
 | gpl | git pull |

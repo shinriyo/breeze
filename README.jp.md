@@ -38,6 +38,8 @@ gitコマンドのショートカットツールです。
 | gap | git add -p |
 | gau | git add -u |
 | gf | git fetch |
+| gfa | git fetch --all |
+| gfr | git fetch && git rebase |
 | gaa | git add --all . |
 | gps | git push |
 | gpl | git pull |

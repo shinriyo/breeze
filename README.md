@@ -38,6 +38,8 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gs | git status |
 | ga | git add |
 | gf | git fetch |
+| gfa | git fetch --all |
+| gfr | git fetch && git rebase |
 | gaa | git add --all . |
 | gap | git add -p |
 | gau | git add -u |
