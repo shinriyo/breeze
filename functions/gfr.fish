@@ -1,3 +1,3 @@
 function gf
-    git fetch && git rebase
+    git fetch; and git rebase
 end
