@@ -11,14 +11,14 @@ function __gs
     set first_msg (git status)
     for branch_name in (git status)
       #echo '# ' $branch_name
-      set_color brblack
+      set_color black
       echo -n '# '
       set_color normal
       echo -n 'On branch: '
       set_color --bold white
       echo $branch_name|cut -d ' ' -f3
       set_color normal
-      set_color brblack
+      set_color black
       echo '#'
       # set_color normal
       break # only one
