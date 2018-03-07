@@ -1,4 +1,4 @@
-set -g -x arr ""
+__breeze_variables
 
 function __git_add -a var
     set toplevel (git rev-parse --show-toplevel)

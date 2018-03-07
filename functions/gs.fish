@@ -1,5 +1,4 @@
-# for global
-set -g -x arr ""
+__breeze_variables
 
 function __gs
   set porcelain_res (git status --porcelain)

@@ -1,6 +1,4 @@
-# for global
-set -g -x arr ""
-set -g -x op ""
+__breeze_variables
 
 function __git_branch -a var
     # is numeric 
