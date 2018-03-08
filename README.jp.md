@@ -48,6 +48,8 @@ gitコマンドのショートカットツールです。
 | grsh | git reset --hard |
 | gt | git tag |
 | grm | git rm |
+| grb | git rebase |
+| grbi | git rebase --interactive | 
 | gco | git checkout |
 | gl | git log |
 | gdnw | git diff -w -- |

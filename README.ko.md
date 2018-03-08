@@ -43,6 +43,8 @@ git커맨드의 바로가기 툴입니다.
 | gps | git push |
 | gpl | git pull |
 | gr | git remove -v |
+| grb | git rebase |
+| grbi | git rebase --interactive |
 | grs | git reset -- |
 | grsh | git reset --hard |
 | gt | git tag |
