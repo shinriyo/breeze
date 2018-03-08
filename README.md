@@ -50,6 +50,8 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | grsh | git reset --hard |
 | gt | git tag |
 | grm | git rm |
+| grb | git rebase |
+| grbi | git rebase --interactive |
 | gco | git checkout |
 | gl | git log |
 | gdnw | git diff -w -- |
