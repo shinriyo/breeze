@@ -1,7 +1,4 @@
 function __git_checkout -a var
-    # TODO: for branch or file
-    set toplevel (git rev-parse --show-toplevel)
-
     # is numeric
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
@@ -11,8 +8,10 @@ function __git_checkout -a var
             echo 'Number is large.'
             return
         end
+        
+        set toplevel (git rev-parse --show-toplevel)
         set myarg $arr[$var]
-        git checkout $myarg
+        git checkout $toplevel/$myarg
     else
         # not a number
         git checkout $var
