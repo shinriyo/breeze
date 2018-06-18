@@ -44,17 +44,8 @@ function __gd
 end
 
 function gd
-    # space like, `gd 1 2 3`
-    # only one
-    set res (string split " " -- (string trim $argv))
-    set length (count $res)
-    if [ $length -eq 1 ]
-        __gd $argv
-        return
-    end
-
-    for i in $res
-        #echo $i
+    # Deal with arguments one-by-one
+    for i in $argv
         __gd $i
     end
 end
