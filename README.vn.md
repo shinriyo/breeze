@@ -17,19 +17,19 @@
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-gitコマンドのショートカットツールです。
+Nó là một công cụ cắt ngắn của lệnh git.
 
-[SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze")にインスパイアされました。
+Lấy cảm hứng từ [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze").
 
-翻訳: [日本語], [繁體中文], [简体中文], [한국어], [Русский], [Português], [Türkçe], [Español], [Français], [Català], [Deutsch], [فارسی].
+Bản dịch: [日本語], [繁體中文], [简体中文], [한국어], [Русский], [Português], [Türkçe], [Español], [Français], [Català], [Deutsch], [فارسی].
 
 <div class="centered">
 <img src="http://i.imgur.com/MEKxPSD.png" alt="breeze logos" />
 </div>
 
-## ショートカットリスト
+## Danh sách phím tắt
 
-| ショートカット | オリジナル | 
+| Phím tắt | Bản gốc | 
 |:-----------|------------:|
 | gb | git branch |
 | gce | git clean |
@@ -69,36 +69,36 @@ gitコマンドのショートカットツールです。
 | gasha | git stash apply |
 | gashl | git stash list |
 
-### gitのためのオリジナルショートカット
+### Lối tắt ban đầu cho git
 
-| ショートカット | オリジナル | コメント |
+| Phím tắt | Gốc | Bình luận |
 |:-----------|------------|------------:|
 | gurl | git config --get remote.origin.url | |
 | gopen | open your github (macOS Only) | |
 | gashu | git stash --include-untracked | |
-| gbu | git branch --set-upstream-to=origin/<branch> master | パラメータは自分のブランチ名を指定してください。 |
-| gtop | git rev-parse --show-toplevel | gitのtopのパスを表示します. |
-| cdgtop | cd (git rev-parse --show-toplevel) | gitのtopのパスへ移動します. |
+| gbu | git branch --set-upstream-to=origin/<branch> master | Vui lòng chỉ định tên chi nhánh của bạn cho thông số. |
+| gtop | git rev-parse --show-toplevel | Hiển thị đường dẫn top của git. |
+| cdgtop | cd (git rev-parse --show-toplevel) | Đi đến đường dẫn top của git. |
 
-## インストール
+## Cài đặt
 
-[fisherman]とともに使います。
+Tôi sẽ sử dụng nó với [fisherman].
 
 ```
 fisher shinriyo/breeze
 ```
 
-## 使い方
+## Cách sử dụng
 
-### `git status`のgsコマンドを使って数字を見る。
+### Sử dụng lệnh gs của `git status` để xem số.
 
 <div class="centered">
 <img src="http://i.imgur.com/F3NHal3.png" alt="Gs With Shortcuts" />
 </div>
 
-### `ga`のあとに数字指定で追加。(gcoやglも数字指定可能)
+### Thêm `ga` theo sau là một số. (Số cũng có thể được chỉ định cho gco và gl)
 
-(例)`1`, `1-3`, `2 3`など。
+(Một ví dụ)`1`, `1-3`, `2 3`và những người khác.
 <div class="centered">
 <img src="http://i.imgur.com/RpspQI2.png" alt="Ga With Shortcuts" />
 </div>
