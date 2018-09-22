@@ -11,7 +11,9 @@ function __git_checkout -a var
         
         set toplevel (git rev-parse --show-toplevel)
         set myarg $arr[$var]
-        git checkout $toplevel/$myarg
+        git checkout $myarg
+        # to allow gco from subdirs, use:
+        # git checkout $toplevel/$myarg
     else
         # not a number
         git checkout $var
@@ -21,6 +23,8 @@ end
 function __gco
     # number
     set res (string split "-" -- (string trim $argv))
+    # for branch names with hyphens, use:
+    # set res (string trim $argv)
     set first $res[1]
     set length (count $res)
     set last ""
