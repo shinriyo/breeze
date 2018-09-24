@@ -16,7 +16,7 @@
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-gitコマンドのショートカットツールです。
+fish shell用gitコマンドのショートカットツールです。
 
 [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze")にインスパイアされました。
 

@@ -16,7 +16,7 @@
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-git커맨드의 바로가기 툴입니다.
+fish shell의 git커맨드의 바로가기 툴입니다.
 
 [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze")인스파이어 되었습니다. .
 
