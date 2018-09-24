@@ -16,7 +16,7 @@
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-Shortcut tools for git command.
+Shortcut tools for git command in fish shell.
 
 It is inspired from [SCM Breeze](https://github.com/scmbreeze/scm_breeze "SCM Breeze").
 
