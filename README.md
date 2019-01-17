@@ -83,16 +83,16 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 
 ## Install
 
-With [fisherman]
+With [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```
-fisher shinriyo/breeze
+fisher add shinriyo/breeze
 ```
 
 ## Uninstall
 
 ```
-fisher uninstall breeze
+fisher rm shinriyo/breeze
 ```
 
 ## Usage
