@@ -86,13 +86,13 @@ Es ist inspiriert von [SCM Breeze] (https://github.com/scmbreeze/scm_breeze "SCM
 Mit [Fischer]
 
 `` `
-Fischer Shinriyo / Brise
+fisher add shinriyo/breeze
 `` `
 
 ## Deinstallieren
 
 `` `
-Fisher deinstallieren Brise
+fisher rm shinriyo/breeze
 `` `
 
 ## Verwendung

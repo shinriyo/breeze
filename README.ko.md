@@ -82,7 +82,13 @@ fish shell의 git커맨드의 바로가기 툴입니다.
 [fisherman] 모두 사용합니다 
 
 ```
-fisher shinriyo/breeze
+fisher add shinriyo/breeze
+```
+
+## 안인스톨
+
+```
+fisher rm shinriyo/breeze
 ```
 
 ## 사용법 

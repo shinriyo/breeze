@@ -85,7 +85,13 @@ Bản dịch: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 Tôi sẽ sử dụng nó với [fisherman].
 
 ```
-fisher shinriyo/breeze
+fisher add shinriyo/breeze
+```
+
+##  Gỡ cài đặt
+
+```
+fisher rm shinriyo/breeze
 ```
 
 ## Cách sử dụng

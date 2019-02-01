@@ -85,15 +85,15 @@ Balık kabuğundaki git komutu için kısayol araçları.
 
 [Balıkçı] ile
 
-`
-balıkçı shinriyo / esinti
-`
+```
+fisher add shinriyo/breeze
+```
 
 ## Kaldır
 
-`
-balıkçı sürgün esinti
-`
+```
+fisher rm shinriyo/breeze
+```
 
 ## Kullanımı
 

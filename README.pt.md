@@ -86,13 +86,13 @@ Tłumaczenia: [日本語], [繁體 中文], [简体 中文], [한국어], [Ру�
 Z [rybakiem]
 
 `` `
-fisher shinriyo / breeze
+fisher add shinriyo/breeze
 `` `
 
 ## Odinstaluj
 
 `` `
-Deszcz odinstaluj fisherów
+fisher rm shinriyo/breeze
 `` `
 
 ## Stosowanie
