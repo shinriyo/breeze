@@ -86,13 +86,13 @@
 با [ماهیگیر]
 
 `` `
-فیشر shinriyo / نسیم
+fisher add shinriyo/breeze
 `` `
 
 ## پاک کردن
 
 `` `
-فیشینگ نسیم را پاک کنید
+fisher rm shinriyo/breeze
 `` `
 
 ## استفاده

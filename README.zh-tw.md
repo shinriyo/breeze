@@ -86,13 +86,13 @@
 隨著[漁夫]
 
 ```
-fisher shinriyo / breeze
+fisher add shinriyo/breeze
 ```
 
-＃＃ 卸載
+##  卸載
 
 ```
-費希爾卸載微風
+fisher rm shinriyo/breeze
 ```
 
 ##用法

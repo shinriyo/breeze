@@ -84,7 +84,12 @@ fish shell用gitコマンドのショートカットツールです。
 [fisherman]とともに使います。
 
 ```
-fisher shinriyo/breeze
+fisher add shinriyo/breeze
+```
+
+## アンインストール
+```
+fisher rm shinriyo/breeze
 ```
 
 ## 使い方

@@ -86,13 +86,13 @@ Traducciones: [日本語], [中文], [简体 中文], [한국어], [Русски
 Con [pescador]
 
 `` `
-pescador shinriyo / brisa
+fisher add shinriyo/breeze
 `` `
 
 ## Desinstalar
 
 `` `
-fisher uninstall breeze
+fisher rm shinriyo/breeze
 `` `
 
 ## Uso

@@ -86,13 +86,13 @@
 С [рыбаком]
 
 `` `
-рыбак шиньо / бриз
+fisher add shinriyo/breeze
 `` `
 
 ## Удалить
 
 `` `
-рыбак удаляет бриз
+fisher rm shinriyo/breeze
 `` `
 
 ## Применение
