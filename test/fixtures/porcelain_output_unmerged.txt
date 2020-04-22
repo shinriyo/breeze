@@ -1,0 +1,7 @@
+DD a/to_be_moved_by_them_and_renamed_by_us.txt
+AU to_be_moved_by_them_and_renamed_by_us_updated.txt
+UD to_be_deleted_by_them.txt
+UA b/orig.txt
+DU to_be_deleted_by_us.txt
+AA added_by_both.txt
+UU to_be_modified_by_both.txt
