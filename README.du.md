@@ -32,43 +32,43 @@ Es ist inspiriert von [SCM Breeze] (https://github.com/scmbreeze/scm_breeze "SCM
 
 | Verknüpfungsbefehl | Original |
 |: ----------- | ------------: |
-| gb | Git Zweig |
-| gce | git sauber |
-| gcef | git sauber -fd |
-| gs | Git Status |
-| ga | Git hinzufügen |
+| gb | git branch |
+| gce | git clean |
+| gcef | git clean -fd |
+| gs | git status |
+| ga | git add |
+| gap | git add -p |
+| gau | git add -u |
 | gf | git fetch |
 | gfa | git fetch --all |
 | gfr | git fetch && git rebase |
-| gaa | Git hinzufügen --all. |
-| Lücke | git add -p |
-| Gau | git add -u |
+| gaa | git add --all . |
 | gps | git push |
-| gpsf | git push -f |
-| gpl | git ziehen |
-| gr git entferne -v |
-| grs | git reset - |
+| gpl | git pull |
+| gr | git remove -v |
+| grs | git reset -- |
 | grsh | git reset --hard |
-| gt | Git-Tag |
+| gt | git tag |
 | grm | git rm |
 | grb | git rebase |
-| grbi | git rebase --interaktiv |
+| grbi | git rebase --interactive | 
 | gco | git checkout |
-| gl | Gitprotokoll |
-| gdnw | git diff -w - |
-| gdf | git diff - |
-| glg | Gitlog --graph --max-count = 5 |
-| gbl | git Schuld |
-| gcl | Git Klon |
+| gl | git log |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
+| glg | git log --graph --max-count=5 |
+| gbl | git blame |
+| gcl | git clone |
 | gdw | git diff --word-diff |
 | gpr | git pull --rebase |
-| grsl | git reset HEAD ~ |
+| grsl | git reset HEAD~ |
+| gmff | git merge --no-ff |
 | gm | git merge |
 | gmff | git merge --no-ff |
 | gmnff | git merge --ff |
-| Schnittwunde | Git Stash |
-| Gasha | Git Stash anwenden |
-| gashl | Git Stashliste |
+| gash | git stash |
+| gasha | git stash apply |
+| gashl | git stash list |
 
 ### Original Shortcut für Git
 
@@ -79,7 +79,7 @@ Es ist inspiriert von [SCM Breeze] (https://github.com/scmbreeze/scm_breeze "SCM
 | gashu | git stash --include-untracked | |
 | gbu | git branch --set-upstream-to = Ursprung / <branch> master | Argument ist der Name Ihrer Niederlassung. Ex. gbu Meister |
 | gtop | git rev-parse --show-toplevel | Zeige git oberen Pfad. |
-| CDGTOP | cd (git rev-parse --show-toplevel) | Verzeichnis von git top Pfad. |
+| cdgtop | cd (git rev-parse --show-toplevel) | Verzeichnis von git top Pfad. |
 
 ## Installieren
 

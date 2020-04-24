@@ -31,53 +31,53 @@ Tłumaczenia: [日本語], [繁體 中文], [简体 中文], [한국어], [Ру�
 ### Port od SCM Breez
 
 | Polecenie skrótu | Oryginał |
-|: ----------- | ------------: |
-| gb | gałąź git |
+|:-----------|------------:|
+| gb | git branch |
 | gce | git clean |
 | gcef | git clean -fd |
-| gs | status git |
-| ga | git dodaj |
+| gs | git status |
+| ga | git add |
+| gap | git add -p |
+| gau | git add -u |
 | gf | git fetch |
 | gfa | git fetch --all |
 | gfr | git fetch && git rebase |
-| gaa | git add - all. |
-| gap git dodaj -p |
-| gau git add -u |
+| gaa | git add --all . |
 | gps | git push |
-| gpsf | git push -f |
 | gpl | git pull |
-| gr | git usuń -v |
-| grs | git reset - |
+| gr | git remove -v |
+| grs | git reset -- |
 | grsh | git reset --hard |
-| gt | tag git |
+| gt | git tag |
 | grm | git rm |
 | grb | git rebase |
-| grbi | git rebase --interactive |
-| gco | git checkout
-| gl git log |
-| gdnw | git diff -w - |
-| gdf | git diff - |
-| glg | git log - graph - max-count = 5 |
-| gbl | git winem |
+| grbi | git rebase --interactive | 
+| gco | git checkout |
+| gl | git log |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
+| glg | git log --graph --max-count=5 |
+| gbl | git blame |
 | gcl | git clone |
-| gdw | git diff - word-diff |
+| gdw | git diff --word-diff |
 | gpr | git pull --rebase |
-| grsl | git reset HEAD ~ |
-| gm | git scalić |
+| grsl | git reset HEAD~ |
+| gmff | git merge --no-ff |
+| gm | git merge |
 | gmff | git merge --no-ff |
 | gmnff | git merge --ff |
-| rozcięcie | git schowek |
-| gasha | git ukryj zastosowanie |
-| gashl | git lista ukryć |
+| gash | git stash |
+| gasha | git stash apply |
+| gashl | git stash list |
 
 ### Oryginalny skrót dla git
 
 | Polecenie skrótu | Oryginał | Komentarz |
-|: ----------- | ------------ | ------------: |
+|:-----------|------------|------------:|
 | gurl | git config --get remote.origin.url | |
 | gopen | otwórz swój github (tylko macOS) | |
-| gashu | git chash --include-untracked | |
-| gbu | git branch --set-upstream-to = origin / <branch> master | Argument to nazwa twojego oddziału. dawny. gbu master |
+| gashu | git stash --include-untracked | |
+| gbu |  git branch --set-upstream-to=origin/<branch> master | Argument to nazwa twojego oddziału. dawny. gbu master |
 | gtop | git rev-parse --show-toplevel | Pokaż górną ścieżkę git. |
 | cdgtop | cd (git rev-parse --show-toplevel) | Katalog Chenge git top path. |
 
