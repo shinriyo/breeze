@@ -31,49 +31,49 @@
 ### بندر از SCM Breez
 
 | کلید میانبر | اصلی |
-|: ----------- | ------------: |
-| gb | شاخه گیت |
+|:-----------|------------:|
+| gb | git branch |
 | gce | git clean |
 | gcef | git clean -fd |
-| gs | وضعیت گیت |
+| gs | git status |
 | ga | git add |
+| gap | git add -p |
+| gau | git add -u |
 | gf | git fetch |
 | gfa | git fetch --all |
 | gfr | git fetch && git rebase |
-| gaa | git add --all |
-| فاصله | | git add -p |
-| گا | | git add -u |
+| gaa | git add --all . |
 | gps | git push |
-| gpsf | git push -f |
-| gpl | گیت پیک |
-| gr | گیت حذف -v |
-| grs | تنظیم مجدد git - |
-| grsh | تنظیم مجدد git - hard |
-| gt | برچسب git |
+| gpl | git pull |
+| gr | git remove -v |
+| grs | git reset -- |
+| grsh | git reset --hard |
+| gt | git tag |
 | grm | git rm |
 | grb | git rebase |
-| گربی | git rebase --interactive |
-| gco | | پرداخت گیت |
+| grbi | git rebase --interactive | 
+| gco | git checkout |
 | gl | git log |
-| gdnw | git diff -w - |
-| gdf | git diff - |
-| glg | git log --graph --max-count = 5 |
-| gbl | گیت سرزنش |
-| gcl | کلون گیت |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
+| glg | git log --graph --max-count=5 |
+| gbl | git blame |
+| gcl | git clone |
 | gdw | git diff --word-diff |
 | gpr | git pull --rebase |
-| grsl | git reset HEAD ~ |
-| gm | ادغام گیت |
-| gmff | ادغام گیت - no-ff |
-| gmnff | ادغام git --ff |
+| grsl | git reset HEAD~ |
+| gmff | git merge --no-ff |
+| gm | git merge |
+| gmff | git merge --no-ff |
+| gmnff | git merge --ff |
 | gash | git stash |
-| گازا | git stash apply |
-| gashl | فهرست گشت و گذار |
+| gasha | git stash apply |
+| gashl | git stash list |
 
 ### میانبر اصلی برای git
 
 | کلید میانبر | اصلی | نظر |
-|: ----------- | ------------ | ------------: |
+|:-----------|------------|------------:|
 | gurl | git config --get remote.origin.url | |
 | گوپن | github خود را باز کنید (macOS Only) | |
 | gashu | git stash --include-untacked | |

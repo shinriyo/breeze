@@ -31,49 +31,49 @@ Traducciones: [日本語], [中文], [简体 中文], [한국어], [Русски
 ### Puerto de SCM Breez
 
 | Comando de acceso directo | Original |
-|: ----------- | ------------: |
+|:-----------|------------:|
 | gb | git branch |
 | gce | git clean |
 | gcef | git clean -fd |
-| gs | estado de git |
-| ga | git agregar |
+| gs | git status |
+| ga | git add |
+| gap | git add -p |
+| gau | git add -u |
 | gf | git fetch |
 | gfa | git fetch --all |
 | gfr | git fetch && git rebase |
-| gaa | git add --todos. |
-| brecha | git add -p |
-| gau | git agregar -u |
+| gaa | git add --all . |
 | gps | git push |
-| gpsf | git push -f |
 | gpl | git pull |
-| gr | git eliminar -v |
-| grs | git reset - |
+| gr | git remove -v |
+| grs | git reset -- |
 | grsh | git reset --hard |
-| gt | etiqueta de git |
+| gt | git tag |
 | grm | git rm |
 | grb | git rebase |
-| grbi | git rebase --interactivo |
-| gco | git pago y envío |
+| grbi | git rebase --interactive | 
+| gco | git checkout |
 | gl | git log |
-| gdnw | git diff -w - |
-| gdf | git diff - |
-| glg | git log --graph --max-count = 5 |
-| gbl | git culpa |
-| gcl | git clon |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
+| glg | git log --graph --max-count=5 |
+| gbl | git blame |
+| gcl | git clone |
 | gdw | git diff --word-diff |
 | gpr | git pull --rebase |
-| grsl | git reset CABEZA ~ |
+| grsl | git reset HEAD~ |
+| gmff | git merge --no-ff |
 | gm | git merge |
 | gmff | git merge --no-ff |
 | gmnff | git merge --ff |
 | gash | git stash |
-| gasha | git esconder aplicar |
-| Gashl | git stash list |
+| gasha | git stash apply |
+| gashl | git stash list |
 
 ### Atajo original para git
 
 | Comando de acceso directo | Original | Comentario |
-|: ----------- | ------------ | ------------: |
+|:-----------|------------|------------:|
 | gurl | git config --get remote.origin.url | |
 | gopen | abre tu github (solo macOS) | |
 | gashu | git stash --include-untracked | |

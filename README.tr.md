@@ -31,7 +31,7 @@ Balık kabuğundaki git komutu için kısayol araçları.
 ### SCM Breez'den bağlantı noktası
 
 | Kısayol komutu | Orijinal |
-|: ----------- | ------------: |
+|:-----------|------------:|
 | gb | git dalı |
 | gce | git temiz |
 | gcef | git temiz -fd |
@@ -73,7 +73,7 @@ Balık kabuğundaki git komutu için kısayol araçları.
 ### Git için Orijinal Kısayol
 
 | Kısayol komutu | Orijinal | Yorum |
-|: ----------- | ------------ | ------------: |
+|:-----------|------------|------------:|
 | gurl | git config --get remote.origin.url | |
 | gopen | senin github açmak (sadece macOS) | |
 | gashu | git stash --include-untracked | |
