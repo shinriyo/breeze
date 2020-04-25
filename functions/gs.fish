@@ -12,7 +12,7 @@ function __set_variables
     set -g colon ":"
 end
 
-function __sanitize_flags -d "only allow for pre defined flags"
+function __sanitize_flags -d "only allow for predefined flags"
     set whitelist "--ignored" "--renames" "--no-renames"
     set sanitized
 
