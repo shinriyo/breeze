@@ -1,3 +1,3 @@
 function gcl --wraps git --description 'alias gcl=git clone'
-    git clone $argv
+    git clone $argv;
 end
