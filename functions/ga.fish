@@ -6,7 +6,7 @@ function __git_add -a var
     # is numeric 
     if [ "$var" -eq "$var" ] 2>/dev/null
         # number
-        set myarg $arr[$var]
+        set myarg (echo (echo $arr[$var] | string split "/idx/")[2] | string trim | string replace -r -a '\e\[[^m]*m' '')
 
         # -- (hyphen hyphen) compare
         set hyphen (printf "%b" (printf '%s%x' '\x' 45))
