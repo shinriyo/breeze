@@ -1,7 +1,0 @@
-a/to_be_moved_by_them_and_renamed_by_us.txt
-to_be_moved_by_them_and_renamed_by_us_updated.txt
-to_be_deleted_by_them.txt
-b/orig.txt
-to_be_deleted_by_us.txt
-added_by_both.txt
-to_be_modified_by_both.txt
