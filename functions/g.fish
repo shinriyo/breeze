@@ -1,3 +1,3 @@
 function g --wraps git --description 'alias g=git'
-    git
+    git $argv;
 end

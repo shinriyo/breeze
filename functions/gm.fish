@@ -1,3 +1,3 @@
 function gm --wraps git --description 'alias gm=git merge'
-    git merge $argv
+    git merge $argv;
 end
