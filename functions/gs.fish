@@ -1,187 +1,198 @@
 __breeze_variables
 
-function __gs
-  set porcelain_res (git status --porcelain)
-  set length (count $porcelain_res)
+function __set_variables
+    set -g staged
+    set -g unstaged
+    set -g untracked
+    set -g ignored
+    set -g unmerged
+    set -g current_color
 
-  if [ $length -gt 0 ]
-    # reset
-    set arr ""
-    set first_msg (git status)
-    for branch_name in (git status)
-      #echo '# ' $branch_name
-      set_color black
-      echo -n '# '
-      set_color normal
-      echo -n 'On branch: '
-      set_color --bold white
-      echo $branch_name|cut -d ' ' -f3
-      set_color normal
-      set_color black
-      echo '#'
-      # set_color normal
-      break # only one
-    end
-  else
-    # just normal command
-    git status
-    return
-  end
-
-  # messages
-  set git_status1 "Changes to be committed":
-  set git_status3 "Changes not staged for commit":
-  set git_status4 "Untracked files":
-  set git_status5 "Unmerged paths:"
-
-  set arrow "➤ "
-
-  # increment
-  set i 0
-  # git status --porcelain
-  set last_state ""
-  set now_state ""
-
-  for item in (git status --porcelain)
-    set res (string split " " -- (string trim $item))
-    set st $res[1]
-    set name $res[2]
-
-    set color_name 'normal'
-    set renamed_message ''
-
-    # modify
-    if [ $st = 'M' ]
-      # modified
-      set msg '        modified:'
-      # if it is none, it is staged modified.
-      if [ $name = '' ]
-        # 'M ' commited
-        set color_name 'yellow'
-        # [caution] 2 white spaces.
-        set name (string split "  " -- (string trim $item))[2]
-        set now_state $git_status1
-      else
-        # ' M'
-        set color_name 'green'
-        set now_state $git_status3
-      end
-
-      set i (math $i + 1) #increment
-    else if [ $st = 'A' ]
-      # added
-      set color_name 'yellow'
-      set msg '          staged:'
-      # [caution] 2 white spaces.
-      set name (string split "  " -- (string trim $item))[2]
-      set i (math $i + 1) #increment
-      set now_state $git_status1
-    else if [ $st = '??' ]
-      # untracked
-      set color_name 'cyan'
-      set msg '       untracked:'
-      set i (math $i + 1) #increment
-      set now_state $git_status4
-    else if [ $st = 'D' ]
-      # deleted
-      set color_name 'red'
-      set msg '         deleted:'
-
-      if [ $name = '' ]
-        # 'D ' commited
-        # [caution] 2 white spaces.
-        set name (string split "  " -- (string trim $item))[2]
-        set now_state $git_status1
-      else
-        # ' D'
-        set now_state $git_status3
-      end
-
-      set i (math $i + 1) #increment
-    else if [ $st = 'MM' ]
-      # modified and also commited
-      set msg '        modified:'
-      # if it is none, it is staged modified.
-      if [ $name = '' ]
-        set color_name 'yellow'
-        # [caution] 2 white spaces.
-        set name (string split "  " -- (string trim $item))[2]
-        set now_state $git_status1
-      else
-        set color_name 'yellow'
-        set now_state $git_status1
-      end
-
-      set i (math $i + 1) #increment
-    else if [ $st = 'DD' ]
-      echo 'TODO: FIX LATER...DD'
-    else if [ $st = 'AU' ]
-      echo 'TODO: FIX LATER...AU'
-    else if [ $st = 'UD' ]
-      echo 'TODO: FIX LATER...UD'
-    else if [ $st = 'DU' ]
-      echo 'TODO: FIX LATER...DU'
-    else if [ $st = 'AA' ]
-      echo 'TODO: FIX LATER...AA'
-    else if [ $st = 'UU' ]
-      #echo 'TODO: FIX LATER...UU'
-      set msg '        modified:'
-      set color_name 'red'
-      set now_state $git_status5
-      set i (math $i + 1) #increment
-    else if [ $st = 'R' ]
-      # renamed
-      set msg '         renamed:'
-      set all_name (string split "  " -- (string trim $item))[2]
-      set all_name (string split " -> " -- (string trim $all_name))
-      set renamed_message $all_name[1]'-> '
-      set name $all_name[2]
-      #set color_name 'magenta' like purple
-      set color_name 'green'
-      set now_state $git_status1
-      set i (math $i + 1) #increment
-    else if [ $st = 'C' ]
-      echo 'TODO: FIX LATER...'
-    else
-      # TODO: add other status
-      # just echo until add
-      echo $item
-      set color_name 'normal'
-      echo 'TODO: UNKNOWN. FIX LATER...'
-      continue
-    end
-
-    # first message
-    if [ $last_state != $now_state ]
-      echo '#'
-      set_color $color_name
-      echo -n $arrow
-      set_color 'normal'
-      echo $now_state
-      set_color $color_name
-      echo '#'
-    end
-
-    set last_state $now_state
-
-    # push array
-    set arr[$i] $name
-    set_color $color_name
-    echo -ne '#'$msg '' # text without new line
-    set_color normal
-    echo -ne [$i]' ' # text without new line
-    set_color $color_name
-    echo $renamed_message$name
-  end
-  echo '#'
-  set_color normal
+    set -g hash "#"
+    set -g colon ":"
 end
 
-function gs
+function __sanitize_flags -d "only allow for predefined flags"
+    set whitelist "--ignored" "--renames" "--no-renames"
+    set sanitized
+
+    for flag in (string split " " -- $argv)
+        if contains -- $flag $whitelist
+            set sanitized $sanitized $flag
+        end
+    end
+    echo $sanitized
+end
+
+function __parse_unmerged -a us them -d "parse shorthand status for unmerged paths"
+    set code "$us$them"
+    switch $code
+        case DD
+            set current_status "both deleted"
+            set current_color 'red'
+        case AU
+            set current_status "added by us"
+            set current_color 'yellow'
+        case UD
+            set current_status "deleted by them"
+            set current_color 'red'
+        case UA
+            set current_status "added by them"
+            set current_color 'yellow'
+        case DU
+            set current_status "deleted by us"
+            set current_color 'red'
+        case AA
+            set current_status "both added"
+            set current_color 'yellow'
+        case UU
+            set current_status "both modified"
+            set current_color 'green'
+    end
+
+    echo $current_status
+end
+
+function __parse_status -a code -d "parse shorthand status"
+    switch $code
+        case A
+            set current_status "new file"
+            set current_color 'yellow'
+        case C
+            set current_status "copied"
+            set current_color 'magenta'
+        case D
+            set current_status "deleted"
+            set current_color 'red'
+        case M
+            set current_status "modified"
+            set current_color 'green'
+        case R
+            set current_status "renamed"
+            set current_color 'blue'
+        case !
+            set current_status "ignored"
+            set current_color 'white'
+        case '?'
+            set current_status "untracked"
+            set current_color 'cyan'
+    end
+
+    echo $current_status
+end
+
+function __parse_state -a state -d "parse the current state"
+    switch $state
+        case staged
+            set current_state "Changes to be committed"
+        case unstaged
+            set current_state "Changes not staged for commit"
+        case untracked
+            set current_state "Untracked files"
+        case unmerged
+            set current_state "Unmerged paths"
+        case '*'
+            set current_state "Ignored files"
+    end
+
+    echo $current_state
+end
+
+function __handle_renames_and_copies -a idx name -d "removes explict rename or copy paths for unstaged files"
+    if test $idx = "R"
+        or test $idx = "C"
+        set elements (string split " -> " $name)
+        set name $elements[2]
+    end
+
+    echo $name
+end
+
+function __print_branch -d "print the branch information"
+    printf (set_color black)"$hash "(set_color normal)"On branch: "(set_color --bold white)(git branch --show-current)(set_color normal)\n(set_color black)"$hash\n"
+end
+
+function __print_state -a message length -d "print the state message"
+    if test $length -gt 0
+        set arrow "➤"
+        printf (set_color black)"$hash"\n(set_color normal)"$arrow $message$colon"\n(set_color black)"$hash\n"
+    end
+end
+
+function __format_status -a message name -d "foramt the output of the status"
+    echo (printf "%s %15s$colon %s %s" (set_color $current_color)$hash $message (set_color normal)"/idx/" (set_color $current_color)$name)
+end
+
+function __print_status -a st i padding -d "prints the status"
+    set arr $arr (echo (echo $st | string split "/idx/")[2] | string trim | string replace -r -a '\e\[[^m]*m' '' | string split " -> ")[-1]
+    printf (string replace "/idx/" (printf "%"$padding"s" [$i]) $st)\n
+end
+
+function __print -d "print output to screen"
+    set length (count $staged $unmerged $unstaged $untracked $ignored)
+    set idx_padding (math 2 + (count (string split '' $length )))
+    set states staged unmerged unstaged untracked ignored
+
+    __print_branch
+
+    set i 1
+    for state in $states
+        __print_state (__parse_state $state) (count $$state)
+        for st in $$state
+            __print_status $st $i $idx_padding
+            set i (math $i + 1)
+        end
+    end
+
+    if test $length -eq 0
+        echo (set_color black)"$hash"(set_color normal)" nothing to commit, working tree clean"
+    end
+
+    echo (set_color black)"$hash"
+    set_color normal
+end
+
+function __gs -a flags -d "group statuses by state and print to screen"
+
+    set unmerged_files (git diff --name-only --diff-filter=U)
+
+    for row in (eval (string join " " "git status --porcelain" -- $flags))
+        set idx (string sub -l 1 $row)
+        set tree (string sub -s 2 -l 1 $row)
+        set name (string sub -s 4 $row | string unescape )
+
+        if contains $name $unmerged_files
+            set unmerged $unmerged (__format_status (__parse_unmerged $idx $tree) $name)
+            continue
+        end
+
+        if test $idx = "?"
+            set untracked $untracked (__format_status (__parse_status $idx) $name)
+            continue
+        end
+
+        if test $idx = !
+            set ignored $ignored (__format_status (__parse_status $idx) $name)
+            continue
+        end
+
+        if test $idx != " "
+            set staged $staged (__format_status (__parse_status $idx) $name)
+        end
+
+        if test $tree != " "
+            set unstaged $unstaged (__format_status (__parse_status $tree) (__handle_renames_and_copies $idx $name))
+        end
+    end
+
+    __print
+end
+
+function gs $argv
     set res (git rev-parse --is-inside-work-tree)
     if [ $res = 'true' ]
-        # git status
-        __gs
+        __set_variables
+        __gs (__sanitize_flags $argv)
     else
         echo 'fatal: Not a git repository (or any of the parent directories): .git'
     end
