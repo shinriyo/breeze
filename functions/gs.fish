@@ -1,6 +1,7 @@
 __breeze_variables
 
 function __set_variables
+    set arr
     set -g staged
     set -g unstaged
     set -g untracked
