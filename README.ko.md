@@ -79,7 +79,7 @@ fish shell의 git커맨드의 바로가기 툴입니다.
 
 ## 인스톨 
 
-[fisherman] 모두 사용합니다 
+[Fisher](https://github.com/jorgebucaran/fisher) 모두 사용합니다 
 
 ```
 fisher add shinriyo/breeze

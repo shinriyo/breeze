@@ -205,7 +205,7 @@ láizì SCM Breez de###gǎngkǒu
 
 ##Ānzhuāng
 
-suízhe [yúfū]
+suízhe [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```
 fisher shinriyo/ breeze
