@@ -83,7 +83,7 @@ Es ist inspiriert von [SCM Breeze] (https://github.com/scmbreeze/scm_breeze "SCM
 
 ## Installieren
 
-Mit [Fischer]
+Mit [Fisher](https://github.com/jorgebucaran/fisher)
 
 `` `
 fisher add shinriyo/breeze

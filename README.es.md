@@ -83,7 +83,7 @@ Traducciones: [日本語], [中文], [简体 中文], [한국어], [Русски
 
 ## Instalar
 
-Con [pescador]
+[Fisher](https://github.com/jorgebucaran/fisher)
 
 `` `
 fisher add shinriyo/breeze

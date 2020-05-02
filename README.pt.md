@@ -83,7 +83,7 @@ Tłumaczenia: [日本語], [繁體 中文], [简体 中文], [한국어], [Ру�
 
 ## Zainstalować
 
-Z [rybakiem]
+Z [Fisher](https://github.com/jorgebucaran/fisher)
 
 `` `
 fisher add shinriyo/breeze

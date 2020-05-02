@@ -83,7 +83,7 @@ Balık kabuğundaki git komutu için kısayol araçları.
 
 ## Yükle
 
-[Balıkçı] ile
+[Fisher](https://github.com/jorgebucaran/fisher) ile
 
 ```
 fisher add shinriyo/breeze

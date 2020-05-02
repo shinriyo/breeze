@@ -83,7 +83,7 @@
 
 ## Установить
 
-С [рыбаком]
+С [Fisher](https://github.com/jorgebucaran/fisher)
 
 `` `
 fisher add shinriyo/breeze

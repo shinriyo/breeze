@@ -81,7 +81,7 @@ fish shell用gitコマンドのショートカットツールです。
 
 ## インストール
 
-[fisherman]とともに使います。
+[Fisher](https://github.com/jorgebucaran/fisher) とともに使います。
 
 ```
 fisher add shinriyo/breeze

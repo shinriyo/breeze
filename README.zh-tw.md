@@ -83,7 +83,7 @@
 
 ##安裝
 
-隨著[漁夫]
+隨著[Fisher](https://github.com/jorgebucaran/fisher)
 
 ```
 fisher add shinriyo/breeze

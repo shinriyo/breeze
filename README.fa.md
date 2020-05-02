@@ -83,7 +83,7 @@
 
 ## نصب
 
-با [ماهیگیر]
+[Fisher](https://github.com/jorgebucaran/fisher) ماهیگیر
 
 `` `
 fisher add shinriyo/breeze

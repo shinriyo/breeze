@@ -82,7 +82,7 @@ Bản dịch: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 
 ## Cài đặt
 
-Tôi sẽ sử dụng nó với [fisherman].
+Tôi sẽ sử dụng nó với [Fisher](https://github.com/jorgebucaran/fisher).
 
 ```
 fisher add shinriyo/breeze
