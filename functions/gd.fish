@@ -44,8 +44,13 @@ function __gd
 end
 
 function gd
-    # Deal with arguments one-by-one
-    for i in $argv
-        __gd $i
+    # If we have no arguments, just run git diff
+    if [ (count $argv) -eq 0 ]
+        git diff
+    else
+        # Deal with arguments one-by-one
+        for i in $argv
+            __gd $i
+        end
     end
 end
