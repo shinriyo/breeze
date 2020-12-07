@@ -44,7 +44,7 @@ Translations: [日本語], [繁體中文], [简体中文], [한국어], [Рус�
 | gap | git add -p |
 | gau | git add -u |
 | gps | git push |
-| gpsf | git push -f |
+| gpsf | git push --force-with-lease |
 | gpl | git pull |
 | gr | git remove -v |
 | grs | git reset -- |

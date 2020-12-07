@@ -44,7 +44,7 @@
 |差距| git add -p |
 |高| git add -u |
 | gps | git push |
-| gpsf | git push -f |
+| gpsf | git push --force-with-lease |
 | gpl | git pull |
 | gr | git remove -v |
 | grs | git reset - |
@@ -166,7 +166,7 @@ láizì SCM Breez de###gǎngkǒu
 |Chājù | git add -p |
 |gāo | git add -u |
 | gps | git push |
-| gpsf | git push -f |
+| gpsf | git push --force-with-lease |
 | gpl | git pull |
 | gr | git remove -v |
 | grs | git reset - |
