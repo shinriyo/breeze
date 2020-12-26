@@ -44,7 +44,7 @@ Balık kabuğundaki git komutu için kısayol araçları.
 | boşluk | git add -p |
 | gau | git ekle -u |
 | gps | git itme |
-| gpsf | git push -f |
+| gpsf | git push --force-with-lease |
 | gpl | git çek |
 | gr | git kaldır -v |
 | grs | git sıfırla - |
