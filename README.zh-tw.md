@@ -86,7 +86,7 @@
 隨著[Fisher](https://github.com/jorgebucaran/fisher)
 
 ```
-fisher add shinriyo/breeze
+fisher install shinriyo/breeze
 ```
 
 ##  卸載
