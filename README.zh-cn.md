@@ -86,7 +86,7 @@
 随着[渔夫]
 
 ```
-fisher add shinriyo/breeze
+fisher install shinriyo/breeze
 ```
 
 ##  卸载

@@ -86,7 +86,7 @@ Balık kabuğundaki git komutu için kısayol araçları.
 [Fisher](https://github.com/jorgebucaran/fisher) ile
 
 ```
-fisher add shinriyo/breeze
+fisher install shinriyo/breeze
 ```
 
 ## Kaldır

@@ -86,7 +86,7 @@ Tłumaczenia: [日本語], [繁體 中文], [简体 中文], [한국어], [Ру�
 Z [Fisher](https://github.com/jorgebucaran/fisher)
 
 `` `
-fisher add shinriyo/breeze
+fisher install shinriyo/breeze
 `` `
 
 ## Odinstaluj
