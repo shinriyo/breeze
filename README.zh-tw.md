@@ -46,7 +46,7 @@
 | gps | git push |
 | gpsf | git push --force-with-lease |
 | gpl | git pull |
-| gr | git remove -v |
+| gr | git remote -v |
 | grs | git reset - |
 | grsh | git reset --hard |
 | gt | git標籤|
@@ -55,14 +55,15 @@
 |格比| git rebase --interactive |
 | gco | git checkout |
 | gl | git log |
-| gdnw | git diff -w - |
-| gdf | git diff - |
-| glg | git log --graph --max-count = 5 |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
+| glg | git log --graph --max-count=5 |
 | gbl | git blame |
 | gcl | git clone |
 | gdw | git diff --word-diff |
-| gpr | git pull --rebase |
+| gplr | git pull --rebase |
 | grsl | git reset HEAD~ |
+| gmff | git merge --ff |
 | gm | git merge |
 | gmff | git merge --no-ff |
 | gmnff | git merge --ff |
