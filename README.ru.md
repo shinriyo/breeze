@@ -38,31 +38,32 @@
 | gs | git статус |
 | ga | git добавить |
 | gf | git fetch |
-| gfa | git fetch - all |
+| gfa | git fetch --all |
 | gfr | git fetch && git rebase |
-| gaa | git add - all. |
+| gaa | git add --all . |
 | разрыв | git add -p |
 | gau | git add -u |
 | gps | git push |
 | gpsf | git push --force-with-lease |
 | gpl | git pull |
-| gr | git remove -v |
-| grs | git reset - |
+| gr | git remote -v |
+| grs | git reset -- |
 | grsh | git reset --hard |
-| gt; git tag |
+| gt | git tag |
 | grm | git rm |
 | grb | git rebase |
 | grbi | git rebase --interactive |
 | gco | git checkout |
 | gl | git log |
-| gdnw | git diff -w - |
-| gdf | git diff - |
-| glg | git log --graph --max-count = 5 |
+| gdnw | git diff -w -- |
+| gdf | git diff -- |
+| glg | git log --graph --max-count=5 |
 | gbl | git wame |
 | gcl | git clone |
-| gdw | git diff -word-diff |
-| gpr | git pull --rebase |
-| grsl | git reset HEAD ~ |
+| gdw | git diff --word-diff |
+| gplr | git pull --rebase |
+| grsl | git reset HEAD~ |
+| gmff | git merge --ff |
 | gm | git merge |
 | gmff | git merge --no-ff |
 | gmnff | git merge --ff |
