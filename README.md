@@ -13,8 +13,8 @@
 
 # breeze
 
-[![Build Status](https://api.travis-ci.com/shinriyo/breeze.svg?branch=main)](https://travis-ci.com/shinriyo/breeze)
-[![Slack Room](https://img.shields.io/badge/slack-join-green.svg)](https://join.slack.com/t/breeze-kud8394/shared_invite/zt-2uqwfrlib-MARM8tTXwji~ikaukbA7mg)
+[![Build Status][travis-badge]][travis-link]
+[![Slack Room][slack-badge]][slack-link]
 
 Shortcut tools for git command in fish shell.
 
@@ -114,10 +114,10 @@ Just use short cut command of Shortcut list.
 <img src="http://i.imgur.com/RpspQI2.png" alt="Ga With Shortcuts" />
 </div>
 
-[travis-link]: https://travis-ci.org/shinriyo/breeze
-[travis-badge]: https://img.shields.io/travis/shinriyo/breeze.svg
-[slack-link]: https://fisherman-wharf.herokuapp.com
-[slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
+[travis-link]: https://travis-ci.com/shinriyo/breeze
+[travis-badge]: https://api.travis-ci.com/shinriyo/breeze.svg?branch=main
+[slack-link]: https://join.slack.com/t/breeze-kud8394/shared_invite/zt-2uqwfrlib-MARM8tTXwji~ikaukbA7mg
+[slack-badge]: https://img.shields.io/badge/slack-join-green.svg
 [fisherman]: https://github.com/fisherman/fisherman
 
 ***Enjoy!***
