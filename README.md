@@ -13,8 +13,8 @@
 
 # breeze
 
-[![Build Status][travis-badge]][travis-link]
-[![Slack Room][slack-badge]][slack-link]
+[![Build Status](https://api.travis-ci.com/shinriyo/breeze.svg?branch=main)](https://travis-ci.com/shinriyo/breeze)
+[![Slack Room](https://img.shields.io/badge/slack-join-green.svg)](https://join.slack.com/t/breeze-kud8394/shared_invite/zt-2uqwfrlib-MARM8tTXwji~ikaukbA7mg)
 
 Shortcut tools for git command in fish shell.
 
